@@ -134,7 +134,7 @@ const NavMenuModal = ({
                       href={link.href}
                       className={clsx(
                         link.href === currentPath && "font-semibold",
-                        link.href !== currentPath && "font-thin"
+                        link.href !== currentPath && "font-normal"
                       )}
                     >
                       {link.name}
