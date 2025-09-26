@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <>
       <div className="w-full h-fit fixed top-8 left-0 z-50">
-        <header className="w-11/12 mx-auto py-3 px-5 bg-black-two/90 rounded-4xl shadow shadow-dirty-white flex items-center justify-between">
+        <header className="w-11/12 mx-auto py-3 px-5 lg:px-7 lg:py-5 bg-black-two/90 rounded-4xl shadow shadow-dirty-white flex items-center justify-between">
           <Link href={"/"}>
             <Image
               src="/Logo.png"
@@ -51,10 +51,18 @@ const Header = () => {
           <button
             onClick={onOpen}
             aria-label="Menu Button"
-            className="cursor-pointer"
+            className="cursor-pointer lg:hidden"
           >
             <IoMenu color="#FFFFFF" className="size-6" />
           </button>
+          <nav className="hidden lg:flex gap-8 font-poppins text-white text-lg w-fit">
+            {navigationLinks.map((link) => (
+              <Link key={link.id} href={link.href} className={clsx("font-normal hover:font-semibold", link.href === pathname && "font-semibold underline underline-offset-8")}>
+                {" "}
+                {link.name}{" "}
+              </Link>
+            ))}
+          </nav>
         </header>
       </div>
 
@@ -79,7 +87,11 @@ type NavMenuModalProps = {
   currentPath?: string;
 };
 
-const NavMenuModal = ({ links, onClose, currentPath = "" }: NavMenuModalProps) => {
+const NavMenuModal = ({
+  links,
+  onClose,
+  currentPath = "",
+}: NavMenuModalProps) => {
   return (
     <>
       {/* Overlay */}
@@ -113,21 +125,36 @@ const NavMenuModal = ({ links, onClose, currentPath = "" }: NavMenuModalProps) =
             {/* Navigation Links */}
             <nav>
               {links.map((link) => (
-                <ul key={link.id} className="flex flex-col font-poppins text-white text-lg md:text-xl">
+                <ul
+                  key={link.id}
+                  className="flex flex-col font-poppins text-white text-lg md:text-xl"
+                >
                   <li>
-                    <Link href={link.href} className={clsx(link.href === currentPath && "font-semibold", link.href !== currentPath && "font-thin")}>{link.name}</Link>
-                  </li> 
-                  {
-                    link.id !== 4 ? (
-                      <hr className="border border-white my-3 md:my-5" />
-                    ) : null
-                  }
+                    <Link
+                      href={link.href}
+                      className={clsx(
+                        link.href === currentPath && "font-semibold",
+                        link.href !== currentPath && "font-thin"
+                      )}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                  {link.id !== 4 ? (
+                    <hr className="border border-white my-3 md:my-5" />
+                  ) : null}
                 </ul>
               ))}
             </nav>
           </div>
           <div>
-            <Link href="https://www.linkedin.com/in/nathanael-martinez-1ab5b2280/" target="_blank" referrerPolicy="no-referrer"><FaLinkedin color="#0a66c2" size={33} /></Link>
+            <Link
+              href="https://www.linkedin.com/in/nathanael-martinez-1ab5b2280/"
+              target="_blank"
+              referrerPolicy="no-referrer"
+            >
+              <FaLinkedin color="#0a66c2" size={33} />
+            </Link>
           </div>
         </div>
       </div>
