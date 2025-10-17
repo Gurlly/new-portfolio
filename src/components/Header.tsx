@@ -38,7 +38,7 @@ const Header = () => {
   return (
     <>
       <div className="w-full h-fit fixed top-8 left-0 z-50">
-        <header className="w-11/12 mx-auto py-3 px-5 lg:px-7 lg:py-5 bg-black-two/90 rounded-4xl shadow shadow-dirty-white flex items-center justify-between">
+        <header className="w-11/12 mx-auto py-3 px-5 md:py-3.5 md:px-6 lg:px-7 lg:py-5 bg-black-two/90 rounded-4xl shadow shadow-dirty-white flex items-center justify-between">
           <Link href={"/"}>
             <Image
               src="/Logo.png"
