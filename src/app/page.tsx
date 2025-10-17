@@ -22,8 +22,8 @@ export default function Home() {
 
   return (
     <>
-      <section className="w-full h-full flex items-center font-poppins">
-        <article className="w-full h-fit flex flex-col justify-center items-center gap-y-7 md:gap-y-10 lg:gap-y-12">
+      <section className="w-full flex items-center font-poppins">
+        <article className="w-full full flex flex-col justify-center items-center gap-y-7 md:gap-y-10 lg:gap-y-12">
           {/* Links */}
           <div className="flex items-center gap-x-7 lg:gap-x-10 xl:gap-x-16">
             {socialLinks.map((social, index) => (
@@ -32,7 +32,7 @@ export default function Home() {
                 key={index}
                 target="_blank"
                 referrerPolicy="no-referrer"
-                className="p-3.5 lg:p-4 xl:p-5 rounded-full border-2 border-dirty-green/80 shadow-md shadow-dirty-green hover:scale-110 hover:bg-black-two/60 hover:shadow-dirty-white/80 hover:shadow transition-all ease-linear cursor-pointer"
+                className="p-3.5 lg:p-4 xl:p-5 rounded-full border-2 border-dirty-green/80 shadow-md shadow-dirty-green hover:scale-110 hover:bg-black-two/60 hover:shadow-dirty-white/80 hover:shadow transition-all ease-in-out cursor-pointer"
               >
                 {social.icon}
               </Link>
