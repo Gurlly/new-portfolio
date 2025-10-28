@@ -1,13 +1,14 @@
 import React from "react";
 import PortfolioContents from "@/components/PortfolioContents";
 
-const page = ({
+const page = async ({
   searchParams,
 }: {
-  searchParams: { [key: string]: string | string[] | undefined };
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }) => {
-  
-  const defaultTab = (searchParams.tab as string) ?? "projects";
+  const params = await searchParams;
+  const defaultTab = (params.tab as string) ?? "projects";
+
   console.log(defaultTab);
 
   return (

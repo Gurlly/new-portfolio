@@ -1,0 +1,14 @@
+[
+  {
+    "title": "MCY Dental Dental Clinic",
+    "year": "July 2025 - Present",
+    "description": "A freelance full stack project that aims to streamline dental clinic operations at MCY Dental Clinic and boost business digital presence by creating a website. This system manages patient records, appointments, and billing information. Technologies used include NextJS for the frontend, Tailwind for styling, MongoDB for the database, and JWT for authentication.",
+    "position": "Full-Stack Developer (Freelance)"
+  },
+  {
+    "title": "Smile Solutions Dental Clinic",
+    "year": "August 2024 - May 2025",
+    "description": "A software engineering school project that aims to create a dental system for Smile Solutions Dental Clinic. This system streamlines appointment scheduling, patient management, and treatment tracking. Technologies used include NextJS for the frontend, Tailwind for styling, MongoDB for the database, and JWT for authentication.",
+    "position": "Full-Stack Developer (Freelance)"
+  }
+]

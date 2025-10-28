@@ -8,6 +8,7 @@ import PortfolioCard from "@/components/PortfolioCard";
 
 // Lists
 import projects from "@/data/projects.json";
+import experiences from "@/data/experiences.json";
 
 const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
   const router = useRouter();
@@ -28,7 +29,7 @@ const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
         onValueChange={onChange}
       >
         <TabsList
-          className="mb-8 rounded-lg border bg-transparent
+          className="mb-8 md:mb-14 xl:mb-20 rounded-lg border bg-transparent
               flex w-full flex-wrap gap-2 justify-center h-fit p-2"
         >
           <TabsTrigger value="projects" className="text-dirty-white">
@@ -55,18 +56,38 @@ const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
                 githubLink={project?.githubLink}
               >
                 <div className="text-dirty-white font-light text-sm text-justify mt-1.5">
-                  <p>
-                    {project?.description}
-                  </p>
+                  <p>{project?.description}</p>
                   <p className="mt-3">
-                    <span className="font-semibold">Skills:</span> {project?.skills.join(", ")}
+                    <span className="font-semibold">Skills:</span>{" "}
+                    {project?.skills.join(", ")}
                   </p>
                 </div>
               </PortfolioCard>
             ))}
           </article>
         </TabsContent>
-        <TabsContent value="experiences"></TabsContent>
+        <TabsContent value="experiences">
+          <article className="w-full flex flex-col gap-10 md:gap-14 lg:gap-16">
+            {experiences.map((exp, key) => (
+              <div key={key} className="flex flex-col gap-5 select-none">
+                <div>
+                  <h3 className="text-xl md:text-3xl lg:text-4xl text-dirty-white font-black-han uppercase">
+                    {exp.title}
+                  </h3>
+                  <h4 className="font-medium text-beige text-sm mt-1.5 lg:mt-2.5 md:text-base lg:text-lg">
+                    {exp.position}
+                  </h4>
+                  <p className=" italic font-light text-neutral-300 text-sm md:text-base lg:text-lg">
+                    {exp.year}
+                  </p>
+                </div>
+                <p className="text-justify max-w-4xl xl:max-w-5xl text-sm font-light text-dirty-white md:text-base lg:text-lg">
+                  {exp.description}
+                </p>
+              </div>
+            ))}
+          </article>
+        </TabsContent>
         <TabsContent value="certificate"></TabsContent>
         <TabsContent value="stack"></TabsContent>
       </Tabs>
