@@ -40,7 +40,7 @@ const page = () => {
       icon: <GoOrganization size={25} color="#FFFFFF" />,
       title: "Years of Experiences",
       description: "Projects that built futures",
-      href: "/portfolio?tab=experience",
+      href: "/portfolio?tab=experiences",
       count: calculateYearsOfExperience(),
     },
   ];
@@ -96,11 +96,11 @@ const page = () => {
           </p>
           <div className="w-full flex items-center lg:justify-end mt-10 gap-x-7 flex-wrap gap-y-5 md:gap-y-0">
             <Link
-              href="https://drive.google.com/drive/folders/1l9vN3TWjthNEg_4J_iOXnWWY8hPdYO8W?usp=sharing"
+              href="https://drive.google.com/drive/folders/1kBe3ymYaxSNbSms9RarbGKDDlMmXvr3s?usp=sharing"
               target="_blank"
               className="flex items-center text-white gap-x-3 px-2 py-2.5 xl:px-3 xl:py-3.5 w-36 xl:w-56 justify-center rounded-lg shadow shadow-dirty-white bg-linear-90 from-black-two via-green-gray/50 to-green-gray font-medium md:text-lg xl:text-xl hover:scale-105 transition-transform ease-in-out"
             >
-              <MdLink size={28} color="#FFFFFF" /> CV
+              <MdLink size={28} color="#FFFFFF" /> Resume
             </Link>
             <Link
               href="/about"

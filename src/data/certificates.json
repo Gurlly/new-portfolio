@@ -1,34 +1,108 @@
 [
-    {
-        "title": "",
-        "description": "",
-        "year": "",
-        "imageUrl": "",
-        "skills": [],
-        "credentialLink": ""
-    },
-    {
-        "title": "",
-        "description": "",
-        "year": "",
-        "imageUrl": "",
-        "skills": [],
-        "credentialLink": ""
-    },
-    {
-        "title": "",
-        "description": "",
-        "year": "",
-        "imageUrl": "",
-        "skills": [],
-        "credentialLink": ""
-    },
-    {
-        "title": "",
-        "description": "",
-        "year": "",
-        "imageUrl": "",
-        "skills": [],
-        "credentialLink": ""
-    }
+  {
+    "title": "Deploying AI with FastAPI",
+    "company": "Datacamp",
+    "year": "October 2025",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1OfEjKQZnXywnQF1TXY7MdsuGXC5n6OIg",
+    "skills": ["Python", "FastAPI", "AI Deployment", "APIs", "Security"],
+    "credentialLink": "https://drive.google.com/file/d/1OfEjKQZnXywnQF1TXY7MdsuGXC5n6OIg/view?usp=drive_link"
+  },
+
+  {
+    "title": "Communicating Data Insights",
+    "company": "Datacamp",
+    "year": "September 2025",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1wwhRDBahKHXM1J8A85oqCKlEJVr665cE",
+    "skills": ["Data Visualization", "Communication", "Storytelling"],
+    "credentialLink": "https://drive.google.com/file/d/1wwhRDBahKHXM1J8A85oqCKlEJVr665cE/view?usp=drive_link"
+  },
+  {
+    "title": "Building APIs in Python",
+    "company": "Datacamp",
+    "year": "September 2025",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1YGAm4mt66aN9cvm6FqVLjjrvLphRI7UH",
+    "skills": ["Python", "FastAPI", "APIs", "Web Development"],
+    "credentialLink": "https://drive.google.com/file/d/1YGAm4mt66aN9cvm6FqVLjjrvLphRI7UH/view?usp=drive_link"
+  },
+  {
+    "title": "Exploratory Data Analysis in Python",
+    "company": "Datacamp",
+    "year": "September 2025",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1cR8GKz9JBViKOZDUygW19olKa3eu6gvW",
+    "skills": [
+      "Python",
+      "Data Analysis",
+      "Exploratory Data Analysis",
+      "Data Processing"
+    ],
+    "credentialLink": "https://drive.google.com/file/d/1cR8GKz9JBViKOZDUygW19olKa3eu6gvW/view?usp=drive_link"
+  },
+  {
+    "title": "NextJS Web Development",
+    "company": "Udemy",
+    "year": "August 2024",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1PdVtndEFCD5tBjNl9Oks6r8SJBLoOmQ-",
+    "skills": ["JavaScript", "React", "Next.js", "Web Development"],
+    "credentialLink": "https://drive.google.com/file/d/1PdVtndEFCD5tBjNl9Oks6r8SJBLoOmQ-/view?usp=drive_link"
+  },
+  {
+    "title": "GitHub Foundations",
+    "company": "Datacamp",
+    "year": "July 2025",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1Ym5sSP1y4_9C26VzRQrVKcF7MXyqLtnl",
+    "skills": [
+      "Git",
+      "GitHub",
+      "Version Control",
+      "Collaboration",
+      "Project Management"
+    ],
+    "credentialLink": "https://drive.google.com/file/d/1Ym5sSP1y4_9C26VzRQrVKcF7MXyqLtnl/view?usp=drive_link"
+  },
+  {
+    "title": "Complete Front-End Web Development",
+    "company": "Udemy",
+    "year": "June 2024",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=16ro6XD0eKxH32NllbsBGqQUl-42EVCLK",
+    "skills": ["HTML", "CSS", "JavaScript", "Web Development", "React"],
+    "credentialLink": "https://drive.google.com/file/d/16ro6XD0eKxH32NllbsBGqQUl-42EVCLK/view?usp=drive_link"
+  },
+  {
+    "title": "JavaScript Essentials 1",
+    "company": "Cisco",
+    "year": "June 2025",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=16i59evm1e0JJH3Im4CP9GERIg8gdjx0e",
+    "skills": ["JavaScript", "Programming", "Web Development", "ES6"],
+    "credentialLink": "https://drive.google.com/file/d/16i59evm1e0JJH3Im4CP9GERIg8gdjx0e/view?usp=drive_link"
+  },
+  {
+    "title": "Developing Designs for UI",
+    "company": "Tesda",
+    "year": "June 2025",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1skxDIj9VQencBA6ocCr8fB6KM8zwKrKG",
+    "skills": ["UI Design", "Prototyping", "User Research", "Figma"],
+    "credentialLink": "https://drive.google.com/file/d/1skxDIj9VQencBA6ocCr8fB6KM8zwKrKG/view?usp=drive_link"
+  },
+  {
+    "title": "NodeJS Introduction",
+    "company": "Simplilearn",
+    "year": "June 2025",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1B4ECLlQPXsVkjHde6lZok5RlSTMOKH7m",
+    "skills": ["JavaScript", "Node.js", "Backend Development", "APIs", "CRUD"],
+    "credentialLink": "https://drive.google.com/file/d/1B4ECLlQPXsVkjHde6lZok5RlSTMOKH7m/view?usp=drive_link"
+  },
+  {
+    "title": "MySQL Basics",
+    "company": "Great Learning",
+    "year": "December 2023",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1NbPlfHSbKVFrfeYKZVnxfTEmfcO3mlCg",
+    "skills": [
+      "MySQL",
+      "Database Management",
+      "SQL",
+      "Data Retrieval",
+      "Data Manipulation"
+    ],
+    "credentialLink": "https://drive.google.com/file/d/1NbPlfHSbKVFrfeYKZVnxfTEmfcO3mlCg/view?usp=drive_link"
+  }
 ]

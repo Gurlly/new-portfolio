@@ -52,11 +52,11 @@ export default function Home() {
               <MdOutlinePerson size={28} color="#FFFFFF" /> About Me
             </Link>
             <Link
-              href="https://drive.google.com/drive/folders/1l9vN3TWjthNEg_4J_iOXnWWY8hPdYO8W?usp=sharing"
+              href="https://drive.google.com/drive/folders/1kBe3ymYaxSNbSms9RarbGKDDlMmXvr3s?usp=sharing"
               target="_blank"
               className="flex items-center text-white gap-x-3 px-2 py-3 xl:px-3 xl:py-4 w-48 xl:w-56 justify-center rounded-lg shadow shadow-dirty-white bg-linear-90 from-black-two via-green-gray/50 to-green-gray font-medium md:text-lg xl:text-xl hover:scale-105 transition-transform ease-in-out"
             >
-              <MdLink size={28} color="#FFFFFF" /> CV
+              <MdLink size={28} color="#FFFFFF" /> Resume
             </Link>
           </div>
         </article>

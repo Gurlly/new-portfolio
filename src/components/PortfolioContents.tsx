@@ -9,6 +9,7 @@ import PortfolioCard from "@/components/PortfolioCard";
 // Lists
 import projects from "@/data/projects.json";
 import experiences from "@/data/experiences.json";
+import certificates from "@/data/certificates.json";
 
 const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
   const router = useRouter();
@@ -88,7 +89,27 @@ const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
             ))}
           </article>
         </TabsContent>
-        <TabsContent value="certificate"></TabsContent>
+        <TabsContent value="certificate">
+          <article className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 md:gap-7">
+            {certificates.map((cert, key) => (
+              <PortfolioCard
+                key={key}
+                title={cert?.title}
+                imageUrl={cert?.imageUrl}
+                previewHref={cert?.credentialLink}
+                githubLink=""
+              >
+                <div className="text-dirty-white font-light text-sm text-justify mt-1.5">
+                  <p className=" italic">{cert?.company}</p>
+                  <p className="mt-3">
+                    <span className="font-semibold">Skills:</span>{" "}
+                    {cert?.skills.join(", ")}
+                  </p>
+                </div>
+              </PortfolioCard>
+            ))}
+          </article>
+        </TabsContent>
         <TabsContent value="stack"></TabsContent>
       </Tabs>
     </>
