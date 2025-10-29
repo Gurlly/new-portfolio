@@ -55,13 +55,13 @@ const page = () => {
             alt="Nathanael Martinez"
             width={500}
             height={500}
-            className="w-52 h-52 rounded-full border-dirty-green/80 shadow-md shadow-dirty-green hover:scale-105 transition-transform ease-in-out"
+            className="w-52 h-52 rounded-full border-dirty-green/80 shadow-md shadow-dirty-green hover:scale-105 transition-transform ease-in-out duration-300"
           />
           <div className="w-full">
             <h5 className="text-3xl md:text-4xl lg:text-5xl font-black-han bg-clip-text text-transparent bg-gradient-to-r from-dirty-white to-beige select-none">
               Hello, I am
             </h5>
-            <h6 className="uppercase mt-2 md:mt-3 lg:mt-4 font-black-han text-dirty-white text-xl lg:text-3xl xl:text-5xl">
+            <h6 className="uppercase mt-2 md:mt-3 lg:mt-4 font-black-han text-dirty-white text-xl lg:text-3xl xl:text-5xl select-none">
               Nathanael A. Martinez
             </h6>
             <div className="w-full flex gap-x-3 flex-wrap mt-5 xl:mt-7 text-white font-light">

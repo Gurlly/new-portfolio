@@ -23,7 +23,7 @@ const AboutCard = ({
 }: CardProps) => {
   return (
     <>
-      <div className="w-full min-h-36 lg:min-h-40 rounded-lg p-3.5 shadow shadow-dirty-white bg-dirty-white/30 font-poppins hover:scale-105 transition-transform ease-linear flex flex-col justify-between">
+      <div className="w-full min-h-36 lg:min-h-40 rounded-lg p-3.5 shadow shadow-dirty-white bg-dirty-white/30 font-poppins hover:scale-105 transition-transform ease-linear duration-300 flex flex-col justify-between">
         <div className="w-full flex items-center justify-between">
           <div className="w-fit flex items-center gap-x-3">
             <span className="p-2 bg-green-gray/80 rounded-full">{icon}</span>

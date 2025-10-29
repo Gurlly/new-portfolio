@@ -240,7 +240,7 @@ const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
           </article>
         </TabsContent>
         <TabsContent value="stack">
-          <article className="w-full flex flex-col gap-5">
+          <article className="w-full flex flex-col gap-6">
             {techStacks.map((stack, key) => (
               <TechStackContainer
                 title={stack.title}
