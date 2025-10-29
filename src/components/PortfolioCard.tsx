@@ -30,7 +30,7 @@ const PortfolioCard = ({
           height={400}
           src={imageUrl}
           alt={title}
-          className="w-full h-auto object-center object-cover aspect-video rounded-lg"
+          className="w-full h-auto object-center object-cover aspect-video rounded-lg select-none"
         />
         <div className="mt-5">
           <h2 className="text-xl font-bold text-dirty-white">{title}</h2>

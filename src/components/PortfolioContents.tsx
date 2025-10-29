@@ -5,11 +5,37 @@ import { useRouter, useSearchParams } from "next/navigation";
 // Components
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import PortfolioCard from "@/components/PortfolioCard";
+import TechStackContainer from "./TechStackContainer";
 
 // Lists
 import projects from "@/data/projects.json";
 import experiences from "@/data/experiences.json";
 import certificates from "@/data/certificates.json";
+
+// Tech Stack Icons
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaBootstrap,
+  FaNodeJs,
+  FaPython,
+  FaJava,
+} from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { RiNextjsFill, RiTailwindCssFill, RiVercelFill } from "react-icons/ri";
+import { TbBrandRedux } from "react-icons/tb";
+import {
+  SiShadcnui,
+  SiFastapi,
+  SiMysql,
+  SiMongodb,
+  SiScikitlearn,
+  SiPytorch,
+  SiPandas,
+  SiNumpy,
+  SiJupyter,
+} from "react-icons/si";
 
 const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
   const router = useRouter();
@@ -21,6 +47,109 @@ const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
     params.set("tab", value);
     router.replace(`/portfolio?${params.toString()}`);
   };
+
+  // Tech Stacks
+  const techStacks = [
+    {
+      title: "Front-End:",
+      technologies: [
+        {
+          icon: FaHtml5,
+          color: "#dc4521",
+        },
+        {
+          icon: FaCss3Alt,
+          color: "#244ad9",
+        },
+        {
+          icon: IoLogoJavascript,
+          color: "#f7e01d",
+        },
+        {
+          icon: FaReact,
+          color: "#01d3f4",
+        },
+        {
+          icon: RiNextjsFill,
+          color: "#000",
+        },
+        {
+          icon: FaBootstrap,
+          color: "#740eee",
+        },
+        {
+          icon: RiTailwindCssFill,
+          color: "#04b0cd",
+        },
+        {
+          icon: TbBrandRedux,
+          color: "#683eae",
+        },
+        {
+          icon: SiShadcnui,
+          color: "#fff",
+        },
+      ],
+    },
+    {
+      title: "Back-End:",
+      technologies: [
+        {
+          icon: FaNodeJs,
+          color: "#4d9b3b",
+        },
+        {
+          icon: FaPython,
+          color: "#326d9b",
+        },
+        {
+          icon: RiVercelFill,
+          color: "#000",
+        },
+        {
+          icon: SiFastapi,
+          color: "#019285",
+        },
+        {
+          icon: FaJava,
+          color: "#7598e1",
+        },
+        {
+          icon: SiMysql,
+          color: "#42749d",
+        },
+        {
+          icon: SiMongodb,
+          color: "#56ad42",
+        },
+      ],
+    },
+    {
+      title: "Data Science:",
+      technologies: [
+        {
+          icon: SiScikitlearn,
+          color: "#f09538",
+        },
+        {
+          icon: SiPytorch,
+          color: "#e8492b",
+        },
+        {
+          icon: SiPandas,
+          color: "#326d9b",
+        },
+        {
+          icon: SiNumpy,
+          color: "#4aa6c9",
+        },
+        {
+          icon: SiJupyter,
+          color: "#ed7520",
+        },
+      ],
+    },
+  ];
 
   return (
     <>
@@ -110,7 +239,17 @@ const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
             ))}
           </article>
         </TabsContent>
-        <TabsContent value="stack"></TabsContent>
+        <TabsContent value="stack">
+          <article className="w-full flex flex-col gap-5">
+            {techStacks.map((stack, key) => (
+              <TechStackContainer
+                title={stack.title}
+                technologies={stack.technologies}
+                key={key}
+              />
+            ))}
+          </article>
+        </TabsContent>
       </Tabs>
     </>
   );
