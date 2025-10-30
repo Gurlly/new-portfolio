@@ -1,58 +1,77 @@
 [
-    {
-        "title": "Smile Solutions System",
-        "description": "A software engineering school project to create a dental system for Smile Solutions.",
-        "skills": ["NextJS", "Tailwind", "MongoDB", "JWT Authentication"],
-        "imageUrl": "https://placehold.co/600x400.png",
-        "previewHref": "",
-        "githubLink": ""
-    },
-    {
-        "title": "MCY Dental System",
-        "description": "A full stack project that aims to streamline dental clinic operations at MCY Dental Clinic.",
-        "skills": ["NextJS", "Tailwind", "MongoDB", "JWT Authentication"],
-        "imageUrl": "https://placehold.co/600x400.png",
-        "previewHref": "",
-        "githubLink": ""
-    },
-    {
-        "title": "Porfolio Website",
-        "description": "A personal portfolio website created to showcase projects and skills.",
-        "skills": ["NextJS", "Tailwind", "TypeScript"],
-        "imageUrl": "https://placehold.co/600x400.png",
-        "previewHref": "",
-        "githubLink": "https://github.com/Gurlly/new-portfolio"
-    },
-    {
-        "title": "Weather Application",
-        "description": "First web application project that fetches and displays weather data from an external API.",
-        "skills": ["HTML", "CSS", "JavaScript", "API Integration"],
-        "imageUrl": "https://placehold.co/600x400.png",
-        "previewHref": "https://weather-application-inky-eight.vercel.app/",
-        "githubLink": "https://github.com/Gurlly/weather-application"
-    },
-    {
-        "title": "Dengue Case Forecasting",
-        "description": "A machine learning project using LSTM to forecast dengue cases based on historical and weather data.",
-        "skills": ["Python", "PyTorch", "LSTM", "Data Analysis"],
-        "imageUrl": "https://placehold.co/600x400.png",
-        "previewHref": "",
-        "githubLink": "https://github.com/Gurlly/dengue_weather_predictor"
-    },
-    {
-        "title": "Job Offer Classification",
-        "description": "A machine learning project that classifies job offers as fraudulent or legitimate using NLP techniques and LSTM.",
-        "skills": ["Python", "PyTorch", "Scikit-learn", "NLP", "Data Preprocessing"],
-        "imageUrl": "https://placehold.co/600x400.png",
-        "previewHref": "",
-        "githubLink": "https://github.com/Gurlly/spam_email_detector_lstm"
-    },
-    {
-        "title": "SCC Classification (Thesis)",
-        "description": "A thesis project focused on classifying squamous cell carcinoma using deep learning techniques.",
-        "skills": ["Python", "PyTorch", "CNN", "Deep Learning", "Image Processing"],
-        "imageUrl": "https://placehold.co/600x400.png",
-        "previewHref": "",
-        "githubLink": ""
-    }
+  {
+    "title": "Smile Solutions System",
+    "description": "A software engineering school project to create a dental system for Smile Solutions.",
+    "skills": ["NextJS", "Tailwind", "MongoDB", "JWT Authentication"],
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1t-QbUCx4y7czQitkqONfZsawrj3ZB8Ej",
+    "previewHref": "",
+    "githubLink": ""
+  },
+  {
+    "title": "MCY Dental System",
+    "description": "A full stack project that aims to streamline dental clinic operations at MCY Dental Clinic.",
+    "skills": ["NextJS", "Tailwind", "MongoDB", "JWT Authentication"],
+    "imageUrl": "",
+    "previewHref": "",
+    "githubLink": ""
+  },
+  {
+    "title": "Porfolio Website",
+    "description": "A personal portfolio website created to showcase projects and skills.",
+    "skills": ["NextJS", "Tailwind", "TypeScript"],
+    "imageUrl": "https://drive.google.com/uc?export=view&id=19Ft9fIqv_JV7YmRHgnJQ-r8TZUyPq62-",
+    "previewHref": "",
+    "githubLink": "https://github.com/Gurlly/new-portfolio"
+  },
+  {
+    "title": "Weather Application",
+    "description": "First web application project that fetches and displays weather data from an external API.",
+    "skills": ["HTML", "CSS", "JavaScript", "API Integration"],
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1VLzJTmqt4iUq5seEBe2xrqox70_8MkHS",
+    "previewHref": "https://weather-application-inky-eight.vercel.app/",
+    "githubLink": "https://github.com/Gurlly/weather-application"
+  },
+  {
+    "title": "Dengue Case Forecasting",
+    "description": "A machine learning project using LSTM to forecast dengue cases based on historical and weather data.",
+    "skills": ["Python", "PyTorch", "LSTM", "Data Analysis"],
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1lf3o-IT38_sw-ZeJ7QEu-a18FKhGMH7Z",
+    "previewHref": "",
+    "githubLink": "https://github.com/Gurlly/dengue_weather_predictor"
+  },
+  {
+    "title": "Job Offer Classification",
+    "description": "A machine learning project that classifies job offers as fraudulent or legitimate using NLP techniques and LSTM.",
+    "skills": [
+      "Python",
+      "PyTorch",
+      "Scikit-learn",
+      "NLP",
+      "Data Preprocessing"
+    ],
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1MzQBGRXiQkwKGH9Fu5_EGdHTHHjXyzm5",
+    "previewHref": "",
+    "githubLink": "https://github.com/Gurlly/spam_email_detector_lstm"
+  },
+  {
+    "title": "HIV Trend Analysis (Asia)",
+    "description": "A project that visualizes HIV Trends using multiple indicators such as the country's GDP and health expenditure in Asia.",
+    "skills": [
+      "Python",
+      "Data Cleaning and Processing",
+      "Data Visualization",
+      "Dashboard"
+    ],
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1NprGMxNgxA4aowK8BSMR4d1hwx7vWiWd",
+    "previewHref": "",
+    "githubLink": ""
+  },
+  {
+    "title": "SCC Classification (Thesis)",
+    "description": "A thesis project focused on classifying squamous cell carcinoma using deep learning techniques.",
+    "skills": ["Python", "PyTorch", "CNN", "Deep Learning", "Image Processing"],
+    "imageUrl": "",
+    "previewHref": "",
+    "githubLink": ""
+  }
 ]

@@ -181,7 +181,7 @@ const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
               <PortfolioCard
                 key={key}
                 title={project?.title}
-                imageUrl={project?.imageUrl}
+                imageUrl={project?.imageUrl || "https://placehold.co/600x400.png"}
                 previewHref={project?.previewHref}
                 githubLink={project?.githubLink}
               >
