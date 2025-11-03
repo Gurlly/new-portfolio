@@ -45,7 +45,7 @@ const ContactForm = () => {
       const jsonDataString = JSON.stringify(data);
 
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/v1/classify-message`,
+        `https://portfolio-backend-bl2o.onrender.com/api/v1/classify-message`,
         {
           method: "POST",
           headers: {
