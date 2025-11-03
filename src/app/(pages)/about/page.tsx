@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import AboutCard from "@/components/AboutCard";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +15,27 @@ import { GoOrganization } from "react-icons/go";
 
 // Projects are stored in a JSON file
 import projects from "@/data/projects.json";
+
+// Page metadata
+export const metadata: Metadata = {
+  title: "About Me",
+  description:
+    "Learn more about Nathanael, a Computer Science student at the University of Santo Tomas specializing in backend development, machine learning, and scalable web systems.",
+  keywords: [
+    "About Nathanael",
+    "Backend Developer",
+    "Machine Learning",
+    "FastAPI",
+    "Next.js",
+    "Python",
+    "Data Science",
+    "API Design",
+    "Philippines",
+  ],
+  alternates: {
+    canonical: "https://natmartinez.xyz/about",
+  },
+};
 
 const page = () => {
   const calculateYearsOfExperience = (): number => {

@@ -1,6 +1,31 @@
 import React from "react";
 import PortfolioContents from "@/components/PortfolioContents";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description:
+    "Explore Nathanael’s portfolio: showcasing backend development, machine learning projects, professional experiences, earned certificates, and modern tech stacks including FastAPI, Next.js, and Python.",
+  keywords: [
+    "Nathanael Portfolio",
+    "Backend Developer",
+    "Machine Learning",
+    "Projects",
+    "Certificates",
+    "Experiences",
+    "Tech Stack",
+    "FastAPI",
+    "Next.js",
+    "Python",
+    "Data Science",
+    "Philippines",
+  ],
+  alternates: {
+    canonical: "https://natmartinez.xyz/portfolio",
+  },
+};
+
 const page = async ({
   searchParams,
 }: {

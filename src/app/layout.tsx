@@ -17,8 +17,21 @@ const blackHanSans = Black_Han_Sans({
 
 // Page metadata
 export const metadata: Metadata = {
-  title: "Martinez - Home",
-  description: "",
+  authors: [{ name: "Nathanael Martinez" }],
+  creator: "Nathanael Martinez",
+  publisher: "Nathanael Martinez",
+  metadataBase: new URL("https://natmartinez.xyz"),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
+  }
 };
 
 export default function RootLayout({
@@ -32,7 +45,7 @@ export default function RootLayout({
         className={`${poppinsSans.variable} ${blackHanSans.variable} antialiased relative top-0 left-0`}
       >
         {/* Adding the Header Component */}
-        <Header/>
+        <Header />
         <main className="w-full min-h-dvh flex bg-gradient-to-bl from-black-two via-dark-green to-black-two py-24 px-5 lg:py-32">
           {children}
         </main>

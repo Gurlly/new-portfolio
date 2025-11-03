@@ -1,5 +1,13 @@
 [
   {
+    "title": "Professional Eligibility",
+    "company": "Civil Service Commission",
+    "year": "August 2024",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1WAkAD8bNQNviJ0o1LMN63GX7_5UIiLyb",
+    "skills": ["Analytics", "Comprehension", "Problem Solving", "Leadership"],
+    "credentialLink": "https://drive.google.com/file/d/1WAkAD8bNQNviJ0o1LMN63GX7_5UIiLyb/view?usp=drive_link"
+  },
+  {
     "title": "Deploying AI with FastAPI",
     "company": "Datacamp",
     "year": "October 2025",
@@ -7,7 +15,6 @@
     "skills": ["Python", "FastAPI", "AI Deployment", "APIs", "Security"],
     "credentialLink": "https://drive.google.com/file/d/1OfEjKQZnXywnQF1TXY7MdsuGXC5n6OIg/view?usp=drive_link"
   },
-
   {
     "title": "Communicating Data Insights",
     "company": "Datacamp",
