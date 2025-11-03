@@ -21,7 +21,16 @@ type FormValues = {
   message: string;
 };
 
+type ClassificationResult = {
+  success: boolean;
+  message: string;
+  classification?: string;
+  confidence?: number;
+  error?: string;
+};
+
 const ContactForm = () => {
+  // Form default values
   const form = useForm<FormValues>({
     defaultValues: {
       name: "",
@@ -31,9 +40,37 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = (data: FormValues) => {
-    console.log("Test Function");
-    console.log(data);
+  const onSubmit = async (data: FormValues) => {
+    try {
+      const jsonDataString = JSON.stringify(data);
+
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/api/v1/classify-message`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: jsonDataString,
+        }
+      );
+
+      const result: ClassificationResult = await res.json();
+
+      if (result.success) {
+        alert("Thank you for sending me a message! Will reply as soon as possible!");
+        form.reset();
+      } else {
+        if (result.error && result.error.includes("spam")) {
+          alert("Your message was classified as spam and was not sent.");
+        } else {
+          alert(`Error: ${result.message || "Unknown error occurred"}`);
+        }
+      }
+    } catch (err) {
+      console.error("Submission Error:", err);
+      alert("An error occured while submitting the form.");
+    }
   };
 
   return (
@@ -155,7 +192,7 @@ const ContactForm = () => {
               rules={{
                 required: "Message is required",
                 maxLength: {
-                  value: 500,
+                  value: 1000,
                   message: `Messaeg cannot exceed 500 characters`,
                 },
               }}
@@ -168,7 +205,7 @@ const ContactForm = () => {
                     <Textarea
                       placeholder="Type your message..."
                       className="bg-dirty-white text-black-two h-60 lg:text-base"
-                      maxLength={500}
+                      maxLength={1000}
                       minLength={50}
                       required
                       {...field}
@@ -183,7 +220,10 @@ const ContactForm = () => {
             />
           </div>
 
-          <button type="submit" className="w-full mt-5 text-base py-3 bg-black/75 rounded-lg hover:bg-black/50 transition-[background] ease-linear duration-150 text-dirty-white">
+          <button
+            type="submit"
+            className="w-full mt-5 text-base py-3 bg-black/75 rounded-lg hover:bg-black/50 transition-[background] ease-linear duration-150 text-dirty-white"
+          >
             Send
           </button>
         </form>
