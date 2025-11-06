@@ -1,6 +1,9 @@
 "use client";
 
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+
+// Components
 import {
   Form,
   FormControl,
@@ -12,6 +15,9 @@ import {
 } from "./ui/form";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+
+// Icons
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 // Form types
 type FormValues = {
@@ -40,7 +46,10 @@ const ContactForm = () => {
     },
   });
 
+  const [loading, setLoading] = useState(false); // Form Loading
+
   const onSubmit = async (data: FormValues) => {
+    setLoading(true);
     try {
       const jsonDataString = JSON.stringify(data);
 
@@ -58,7 +67,9 @@ const ContactForm = () => {
       const result: ClassificationResult = await res.json();
 
       if (result.success) {
-        alert("Thank you for sending me a message! Will reply as soon as possible!");
+        alert(
+          "Thank you for sending me a message! Will reply as soon as possible!"
+        );
         form.reset();
       } else {
         if (result.error && result.error.includes("spam")) {
@@ -70,6 +81,8 @@ const ContactForm = () => {
     } catch (err) {
       console.error("Submission Error:", err);
       alert("An error occured while submitting the form.");
+    } finally {
+      setLoading(false); // Removes Loading
     }
   };
 
@@ -82,7 +95,7 @@ const ContactForm = () => {
         >
           <div className="w-full">
             <h1 className="text-center text-3xl lg:text-4xl font-black-han bg-clip-text text-transparent bg-gradient-to-r from-dirty-white to-beige">
-              Contact Form
+              Contact Form <span>[Beta]</span>
             </h1>
             <p className="max-w-2xl mx-auto mt-1.5 lg:mt-3.5 text-sm lg:text-base text-center text-dirty-white">
               This form is powered by AI and is intended only for job offers or
@@ -116,6 +129,7 @@ const ContactForm = () => {
                       maxLength={50}
                       minLength={2}
                       required
+                      readOnly={loading}
                       {...field}
                     />
                   </FormControl>
@@ -145,6 +159,7 @@ const ContactForm = () => {
                       placeholder="you@example.com"
                       className="bg-dirty-white text-black-two lg:py-5 lg:text-base"
                       required
+                      readOnly={loading}
                       {...field}
                     />
                   </FormControl>
@@ -177,6 +192,7 @@ const ContactForm = () => {
                       maxLength={30}
                       minLength={2}
                       required
+                      readOnly={loading}
                       {...field}
                     />
                   </FormControl>
@@ -208,6 +224,7 @@ const ContactForm = () => {
                       maxLength={1000}
                       minLength={50}
                       required
+                      readOnly={loading}
                       {...field}
                     />
                   </FormControl>
@@ -220,12 +237,31 @@ const ContactForm = () => {
             />
           </div>
 
-          <button
-            type="submit"
-            className="w-full mt-5 text-base py-3 bg-black/75 rounded-lg hover:bg-black/50 transition-[background] ease-linear duration-150 text-dirty-white"
-          >
-            Send
-          </button>
+          <div className="w-full">
+            <button
+              type="submit"
+              className={`w-full mt-5 text-base py-3 ${
+                loading ? "bg-black-two/90" : "bg-black/75 hover:bg-black/50"
+              } rounded-lg transition-[background] ease-linear duration-150 text-dirty-white flex items-center gap-x-5 justify-center`}
+              disabled={loading}
+            >
+              {loading ? (
+                <>
+                  <AiOutlineLoading3Quarters
+                    size={25}
+                    color="#F5F5F5"
+                    className=" animate-spin"
+                  />{" "}
+                  Loading...
+                </>
+              ) : (
+                "Send"
+              )}
+            </button>
+            {
+              loading ? <p className="mt-3 text-sm lg:text-base text-beige italic">Sending might take a while. Please wait.</p> : null
+            }
+          </div>
         </form>
       </Form>
     </>
