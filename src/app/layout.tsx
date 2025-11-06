@@ -3,6 +3,9 @@ import { Poppins, Black_Han_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
+// Analytics
+import { Analytics } from "@vercel/analytics/next"
+
 // Declaring the fonts (Poppings and Black_Han_Sans)
 const poppinsSans = Poppins({
   variable: "--font-poppins",
@@ -44,6 +47,7 @@ export default function RootLayout({
       <body
         className={`${poppinsSans.variable} ${blackHanSans.variable} antialiased relative top-0 left-0`}
       >
+        <Analytics/>
         {/* Adding the Header Component */}
         <Header />
         <main className="w-full min-h-dvh flex bg-gradient-to-bl from-black-two via-dark-green to-black-two py-24 px-5 lg:py-32">
