@@ -50,7 +50,7 @@ export default function RootLayout({
         <Analytics/>
         {/* Adding the Header Component */}
         <Header />
-        <main className="w-full min-h-dvh flex bg-gradient-to-bl from-black-two via-dark-green to-black-two py-24 px-5 lg:py-32">
+        <main className="w-full min-h-dvh flex bg-gradient-to-bl from-black-two via-dark-green to-black-two py-24 px-5 lg:py-36">
           {children}
         </main>
       </body>

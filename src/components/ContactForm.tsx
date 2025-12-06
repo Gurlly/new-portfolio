@@ -53,6 +53,8 @@ const ContactForm = () => {
     try {
       const jsonDataString = JSON.stringify(data);
 
+      // http://127.0.0.1:8000/api/v1/classify-message
+      // https://portfolio-backend-bl2o.onrender.com/api/v1/classify-message
       const res = await fetch(
         `https://portfolio-backend-bl2o.onrender.com/api/v1/classify-message`,
         {
