@@ -54,9 +54,9 @@ const ContactForm = () => {
       const jsonDataString = JSON.stringify(data);
 
       // http://127.0.0.1:8000/api/v1/classify-message
-      // https://portfolio-backend-bl2o.onrender.com/api/v1/classify-message
+      // https://gurlly-job-offer-classifier.hf.space
       const res = await fetch(
-        `http://127.0.0.1:8000/api/v1/classify-message`,
+        `https://gurlly-job-offer-classifier.hf.space`,
         {
           method: "POST",
           headers: {
