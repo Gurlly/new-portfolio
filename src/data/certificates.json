@@ -111,5 +111,21 @@
       "Data Manipulation"
     ],
     "credentialLink": "https://drive.google.com/file/d/1NbPlfHSbKVFrfeYKZVnxfTEmfcO3mlCg/view?usp=drive_link"
+  },
+  {
+    "title": "Frontend Developer (React)",
+    "company": "HackerRank",
+    "year": "2026",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=10EEorCQu10l8kAihdWM2F2z4vOaK4egN",
+    "skills": ["ReactJS", "JavaScript", "HTML", "CSS", "Web Development"],
+    "credentialLink": "https://www.hackerrank.com/certificates/4333161abdef"
+  },
+  {
+    "title": "NodeJS (Basic)",
+    "company": "HackerRank",
+    "year": "2026",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1SN3RAjpImN2cxuNSY6mszAOjI2oa6jJX",
+    "skills": ["JavaScript", "NodeJS", "ExpressJS", "Backend Development"],
+    "credentialLink": "https://www.hackerrank.com/certificates/12fa82800f82"
   }
 ]
