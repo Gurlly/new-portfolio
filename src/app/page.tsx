@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://natmartinez.xyz",
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  }
 };
 
 export default function Home() {
