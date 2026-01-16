@@ -52,21 +52,21 @@ export default function Home() {
       <section className="w-full flex items-center font-poppins">
         <article className="w-full full flex flex-col justify-center items-center gap-y-7 md:gap-y-10 lg:gap-y-12">
           {/* Links */}
-          <div className="flex items-center gap-x-7 lg:gap-x-10 xl:gap-x-16">
+          <div className="flex items-center gap-x-7 lg:gap-x-9 xl:gap-x-16">
             {socialLinks.map((social, index) => (
               <Link
                 href={social.href}
                 key={index}
                 target="_blank"
                 referrerPolicy="no-referrer"
-                className="p-3.5 lg:p-4 xl:p-5 rounded-full border-2 border-dirty-green/80 shadow-md shadow-dirty-green hover:scale-110 hover:bg-black-two/60 hover:shadow-dirty-white/80 hover:shadow transition-all ease-in-out cursor-pointer"
+                className="p-3.5 lg:p-4 2xl:p-5 rounded-full border-2 border-dirty-green/80 shadow-md shadow-dirty-green hover:scale-110 hover:bg-black-two/60 hover:shadow-dirty-white/80 hover:shadow transition-all ease-in-out cursor-pointer"
               >
                 {social.icon}
               </Link>
             ))}
           </div>
           {/* Name */}
-          <h1 className="max-w-xl lg:max-w-2xl font-black-han text-5xl md:text-[4rem] lg:text-7xl xl:text-[5.5rem] text-center leading-normal bg-clip-text text-transparent bg-gradient-to-r from-dirty-white to-beige uppercase select-none">
+          <h1 className="max-w-xl lg:max-w-2xl font-black-han text-5xl md:text-[4rem] lg:text-7xl xl:text-[4.75rem] text-center leading-normal bg-clip-text text-transparent bg-gradient-to-r from-dirty-white to-beige uppercase select-none">
             Nathanael Martinez
           </h1>
 
@@ -74,14 +74,14 @@ export default function Home() {
           <div className="w-fit flex items-center gap-x-7 lg:gap-x-12 xl:gap-x-16 flex-wrap justify-center gap-y-5 md:gap-y-0">
             <Link
               href="/about"
-              className="flex items-center text-white gap-x-3 px-2 py-3 xl:px-3 xl:py-4 w-48 xl:w-56 justify-center rounded-lg shadow shadow-dirty-white bg-linear-90 from-black-two via-green-gray/50 to-green-gray font-medium md:text-lg xl:text-xl hover:scale-105 transition-transform ease-in-out"
+              className="flex items-center text-white gap-x-3 px-2 py-3 xl:px-2.5 xl:py-3.5 w-48 xl:w-56 justify-center rounded-lg shadow shadow-dirty-white bg-linear-90 from-black-two via-green-gray/50 to-green-gray font-medium md:text-lg 2xl:text-xl hover:scale-105 transition-transform ease-in-out"
             >
               <MdOutlinePerson size={28} color="#FFFFFF" /> About Me
             </Link>
             <Link
               href="https://drive.google.com/drive/folders/1kBe3ymYaxSNbSms9RarbGKDDlMmXvr3s?usp=sharing"
               target="_blank"
-              className="flex items-center text-white gap-x-3 px-2 py-3 xl:px-3 xl:py-4 w-48 xl:w-56 justify-center rounded-lg shadow shadow-dirty-white bg-linear-90 from-black-two via-green-gray/50 to-green-gray font-medium md:text-lg xl:text-xl hover:scale-105 transition-transform ease-in-out"
+              className="flex items-center text-white gap-x-3 px-2 py-3 xl:px-2.5 xl:py-4 w-48 xl:w-56 justify-center rounded-lg shadow shadow-dirty-white bg-linear-90 from-black-two via-green-gray/50 to-green-gray font-medium md:text-lg 2xl:text-xl hover:scale-105 transition-transform ease-in-out"
             >
               <MdLink size={28} color="#FFFFFF" /> Resume
             </Link>
