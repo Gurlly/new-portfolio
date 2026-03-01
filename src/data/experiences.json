@@ -1,5 +1,11 @@
 [
   {
+    "title": "Megaworld Corporation",
+    "year": "February 2026 - April 2026",
+    "description": "Worked in the tech department to improve company operations through data-driven solutions. Responsibilities included loading, processing, and analyzing data to support better decision-making. Gained hands-on experience with automation technologies to enhance efficiency and align with modern industry trends.",
+    "position": "Data Science and Analytics (Intern)"
+  },
+  {
     "title": "MCY Dental Dental Clinic",
     "year": "July 2025 - Present",
     "description": "A freelance full stack project that aims to streamline dental clinic operations at MCY Dental Clinic and boost business digital presence by creating a website. This system manages patient records, appointments, and billing information. Technologies used include NextJS for the frontend, Tailwind for styling, MongoDB for the database, and JWT for authentication.",
