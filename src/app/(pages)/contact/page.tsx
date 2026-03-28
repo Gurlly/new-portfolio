@@ -2,7 +2,7 @@ import ContactForm from "@/components/ContactForm"
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Form",
+  title: "Martinez - Contact",
   description:
     "Get in touch with Nathanael through an AI-powered contact form. Whether for collaborations, internships, or project discussions, reach out easily and securely.",
   keywords: [

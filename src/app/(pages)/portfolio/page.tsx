@@ -4,7 +4,7 @@ import PortfolioContents from "@/components/PortfolioContents";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Martinez - Portfolio",
   description:
     "Explore Nathanael’s portfolio: showcasing backend development, machine learning projects, professional experiences, earned certificates, and modern tech stacks including FastAPI, Next.js, and Python.",
   keywords: [

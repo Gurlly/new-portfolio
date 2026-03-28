@@ -18,7 +18,7 @@ import projects from "@/data/projects.json";
 
 // Page metadata
 export const metadata: Metadata = {
-  title: "About Me",
+  title: "Martinez - About",
   description:
     "Learn more about Nathanael, a Computer Science student at the University of Santo Tomas specializing in backend development, machine learning, and scalable web systems.",
   keywords: [

@@ -32,6 +32,14 @@
     "githubLink": "https://github.com/Gurlly/weather-application"
   },
   {
+    "title": "SCC Classification (Thesis)",
+    "description": "A thesis project focused on classifying squamous cell carcinoma using deep learning techniques.",
+    "skills": ["Python", "PyTorch", "CNN", "Deep Learning", "Image Processing"],
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1nof-_AMNAPgg7IPsuBCzp8EO7nITtcog",
+    "previewHref": "",
+    "githubLink": ""
+  },
+  {
     "title": "Dengue Case Forecasting",
     "description": "A machine learning project using LSTM to forecast dengue cases based on historical and weather data.",
     "skills": ["Python", "PyTorch", "LSTM", "Data Analysis"],
@@ -67,10 +75,17 @@
     "githubLink": ""
   },
   {
-    "title": "SCC Classification (Thesis)",
-    "description": "A thesis project focused on classifying squamous cell carcinoma using deep learning techniques.",
-    "skills": ["Python", "PyTorch", "CNN", "Deep Learning", "Image Processing"],
-    "imageUrl": "",
+    "title": "Databel Churn Analysis",
+    "description": "A comprehensive Power BI dashboard analyzing customer churn for a fictional telecommunications provider.",
+    "skills": [
+      "Power BI",
+      "Data Visualization",
+      "Data Analysis",
+      "Data Storytelling",
+      "Business Intelligence",
+      "DAX"
+    ],
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1lNgoMeAcvPbhoy8vOQz7DpQg9BPVsU-x",
     "previewHref": "",
     "githubLink": ""
   }
