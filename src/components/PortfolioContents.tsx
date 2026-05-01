@@ -23,6 +23,7 @@ import {
   FaJava,
 } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
+import { SiAlteryx } from "react-icons/si";
 import { RiNextjsFill, RiTailwindCssFill, RiVercelFill } from "react-icons/ri";
 import { TbBrandRedux } from "react-icons/tb";
 import {
@@ -147,6 +148,10 @@ const PortfolioContents = ({ defaultTab }: { defaultTab?: string }) => {
           icon: SiJupyter,
           color: "#ed7520",
         },
+        {
+          icon: SiAlteryx,
+          color: "#0478bf",
+        }
       ],
     },
   ];

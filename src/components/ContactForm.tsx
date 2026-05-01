@@ -2,6 +2,7 @@
 
 import { useForm } from "react-hook-form";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 // Components
 import {
@@ -18,6 +19,7 @@ import { Textarea } from "./ui/textarea";
 
 // Icons
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import { FiSend } from "react-icons/fi"; // Added a send icon for the default state
 
 // Form types
 type FormValues = {
@@ -46,15 +48,13 @@ const ContactForm = () => {
     },
   });
 
-  const [loading, setLoading] = useState(false); // Form Loading
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = async (data: FormValues) => {
     setLoading(true);
     try {
       const jsonDataString = JSON.stringify(data);
 
-      // http://127.0.0.1:8000/api/v1/classify-message
-      // https://gurlly-job-offer-classifier.hf.space/api/v1/classify-message
       const res = await fetch(
         `https://gurlly-job-offer-classifier.hf.space/api/v1/classify-message`,
         {
@@ -82,31 +82,36 @@ const ContactForm = () => {
       }
     } catch (err) {
       console.error("Submission Error:", err);
-      alert("An error occured while submitting the form.");
+      alert("An error occurred while submitting the form.");
     } finally {
-      setLoading(false); // Removes Loading
+      setLoading(false);
     }
   };
 
   return (
-    <>
+    <motion.div 
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className="w-full md:w-10/12 lg:w-9/12 mx-auto"
+    >
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="w-full md:w-9/12 mx-auto space-y-7 lg:space-y-10 bg-black-two/90 shadow shadow-dirty-white/60 p-5 lg:p-7 rounded-lg"
+          className="space-y-8 lg:space-y-10 bg-black-two/60 backdrop-blur-lg border border-white/10 shadow-2xl shadow-black/50 p-6 sm:p-8 lg:p-12 rounded-2xl"
         >
-          <div className="w-full">
-            <h1 className="text-center text-3xl lg:text-4xl font-black-han bg-clip-text text-transparent bg-gradient-to-r from-dirty-white to-beige">
-              Contact Form <span>[Beta]</span>
+          <div className="w-full flex flex-col items-center">
+            <h1 className="text-center text-3xl lg:text-5xl font-black-han bg-clip-text text-transparent bg-gradient-to-r from-dirty-white via-gray-300 to-beige tracking-wide">
+              Contact Form <span className="text-xl lg:text-2xl text-green-gray/80 align-top">[Beta]</span>
             </h1>
-            <p className="max-w-2xl mx-auto mt-1.5 lg:mt-3.5 text-sm lg:text-base text-center text-dirty-white">
+            <p className="max-w-xl mx-auto mt-3 lg:mt-5 text-sm lg:text-base text-center text-gray-400 leading-relaxed">
               This form is powered by AI and is intended only for job offers or
               inquiries related to my areas of specialization. Messages outside
-              these topics will be declined and will not be processed.
+              these topics will be classified and declined.
             </p>
           </div>
 
-          <div className="w-full grid grid-cols-1 md:grid-cols-2 font-poppins gap-5 items-start">
+          <div className="w-full grid grid-cols-1 md:grid-cols-2 font-poppins gap-6 lg:gap-8 items-start">
             {/* Name */}
             <FormField
               control={form.control}
@@ -120,14 +125,14 @@ const ContactForm = () => {
               }}
               render={({ field }) => (
                 <FormItem className="md:col-span-1">
-                  <FormLabel className="font-medium text-dirty-white lg:text-base">
+                  <FormLabel className="font-medium text-dirty-white lg:text-base ml-1">
                     Name
                   </FormLabel>
                   <FormControl>
                     <Input
                       type="text"
                       placeholder="Your name"
-                      className="bg-dirty-white text-black-two lg:py-5 lg:text-base"
+                      className="bg-white/90 focus:bg-white text-black-two lg:py-6 lg:text-base rounded-xl border-2 border-transparent focus:border-green-gray/50 transition-all shadow-inner"
                       maxLength={50}
                       minLength={2}
                       required
@@ -135,10 +140,10 @@ const ContactForm = () => {
                       {...field}
                     />
                   </FormControl>
-                  <FormDescription className="text-neutral-200 italic">
+                  <FormDescription className="text-gray-500 italic ml-1">
                     This will appear in the email.
                   </FormDescription>
-                  <FormMessage />
+                  <FormMessage className="ml-1" />
                 </FormItem>
               )}
             />
@@ -152,20 +157,20 @@ const ContactForm = () => {
               }}
               render={({ field }) => (
                 <FormItem className="md:col-span-1">
-                  <FormLabel className="font-medium text-dirty-white lg:text-base">
+                  <FormLabel className="font-medium text-dirty-white lg:text-base ml-1">
                     Email
                   </FormLabel>
                   <FormControl>
                     <Input
                       type="email"
                       placeholder="you@example.com"
-                      className="bg-dirty-white text-black-two lg:py-5 lg:text-base"
+                      className="bg-white/90 focus:bg-white text-black-two lg:py-6 lg:text-base rounded-xl border-2 border-transparent focus:border-green-gray/50 transition-all shadow-inner"
                       required
                       readOnly={loading}
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="ml-1" />
                 </FormItem>
               )}
             />
@@ -183,14 +188,14 @@ const ContactForm = () => {
               }}
               render={({ field }) => (
                 <FormItem className="md:col-span-2">
-                  <FormLabel className="font-medium text-dirty-white lg:text-base">
+                  <FormLabel className="font-medium text-dirty-white lg:text-base ml-1">
                     Subject
                   </FormLabel>
                   <FormControl>
                     <Input
                       type="text"
                       placeholder="Data Science Job Offer"
-                      className="bg-dirty-white text-black-two lg:py-5 lg:text-base"
+                      className="bg-white/90 focus:bg-white text-black-two lg:py-6 lg:text-base rounded-xl border-2 border-transparent focus:border-green-gray/50 transition-all shadow-inner"
                       maxLength={30}
                       minLength={2}
                       required
@@ -198,7 +203,7 @@ const ContactForm = () => {
                       {...field}
                     />
                   </FormControl>
-                  <FormMessage />
+                  <FormMessage className="ml-1" />
                 </FormItem>
               )}
             />
@@ -211,18 +216,21 @@ const ContactForm = () => {
                 required: "Message is required",
                 maxLength: {
                   value: 1000,
-                  message: `Messaeg cannot exceed 500 characters`,
+                  message: "Message cannot exceed 1000 characters",
                 },
               }}
               render={({ field }) => (
                 <FormItem className="md:col-span-2">
-                  <FormLabel className="font-medium text-dirty-white lg:text-base">
+                  <FormLabel className="font-medium text-dirty-white lg:text-base ml-1 flex justify-between">
                     Message
+                    <span className="text-xs text-gray-500 font-normal mt-1">
+                      {field.value.length} / 1000
+                    </span>
                   </FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Type your message..."
-                      className="bg-dirty-white text-black-two h-60 lg:text-base"
+                      className="bg-white/90 focus:bg-white text-black-two h-48 lg:h-60 lg:text-base rounded-xl border-2 border-transparent focus:border-green-gray/50 transition-all shadow-inner resize-none p-4"
                       maxLength={1000}
                       minLength={50}
                       required
@@ -230,43 +238,56 @@ const ContactForm = () => {
                       {...field}
                     />
                   </FormControl>
-                  <FormDescription className="text-neutral-200 italic">
-                    AI powered
+                  <FormDescription className="text-gray-500 italic ml-1">
+                    Analyzed by custom ML Classifier.
                   </FormDescription>
-                  <FormMessage />
+                  <FormMessage className="ml-1" />
                 </FormItem>
               )}
             />
           </div>
 
-          <div className="w-full">
+          <div className="w-full pt-4">
             <button
               type="submit"
-              className={`w-full mt-5 text-base py-3 ${
-                loading ? "bg-black-two/90" : "bg-black/75 hover:bg-black/50"
-              } rounded-lg transition-[background] ease-linear duration-150 text-dirty-white flex items-center gap-x-5 justify-center`}
+              className={`group w-full text-base py-3.5 lg:py-4 rounded-xl transition-all ease-in-out duration-300 text-white font-medium flex items-center gap-x-3 justify-center shadow-lg border border-white/10 ${
+                loading
+                  ? "bg-black-two cursor-not-allowed opacity-80"
+                  : "bg-gradient-to-r from-black-two via-green-gray/80 to-green-gray hover:scale-[1.02] hover:border-white/30"
+              }`}
               disabled={loading}
             >
               {loading ? (
                 <>
                   <AiOutlineLoading3Quarters
-                    size={25}
-                    color="#F5F5F5"
-                    className=" animate-spin"
-                  />{" "}
-                  Loading...
+                    size={22}
+                    className="animate-spin text-dirty-white"
+                  />
+                  Processing Analysis...
                 </>
               ) : (
-                "Send"
+                <>
+                  <FiSend
+                    size={20}
+                    className="group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform text-dirty-white"
+                  />
+                  Send Message
+                </>
               )}
             </button>
-            {
-              loading ? <p className="mt-3 text-sm lg:text-base text-beige italic">Sending might take a while. Please wait.</p> : null
-            }
+            {loading && (
+              <motion.p 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="mt-4 text-sm lg:text-base text-gray-400 italic text-center"
+              >
+                Running through NLP pipeline. Please wait...
+              </motion.p>
+            )}
           </div>
         </form>
       </Form>
-    </>
+    </motion.div>
   );
 };
 

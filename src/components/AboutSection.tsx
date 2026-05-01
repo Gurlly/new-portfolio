@@ -95,7 +95,7 @@ export default function AboutSection() {
         <motion.div variants={itemVariants} className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-dirty-white to-dark-green rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
           <Image
-            src="/Nathan.jpg"
+            src="https://drive.google.com/uc?export=view&id=1Iy2D83SlBsiRPKiOfCOC610xpfNtILH_"
             alt="Nathanael Martinez"
             width={500}
             height={500}

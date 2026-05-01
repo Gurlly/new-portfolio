@@ -8,6 +8,14 @@
     "credentialLink": "https://drive.google.com/file/d/1WAkAD8bNQNviJ0o1LMN63GX7_5UIiLyb/view?usp=drive_link"
   },
   {
+    "title": "Alteryx Designer Core Certified",
+    "company": "Alteryx",
+    "year": "April 2025 - April 2028",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=1sSuamLFXDMzkXB4S4yUFdKRjMY2Gq1jz",
+    "skills": ["Alteryx", "ETL Pipeline", "Workflow", "Analytics", "Problem Solving"],
+    "credentialLink": "https://drive.google.com/file/d/1sSuamLFXDMzkXB4S4yUFdKRjMY2Gq1jz/view?usp=drive_link"
+  },
+  {
     "title": "Deploying AI with FastAPI",
     "company": "Datacamp",
     "year": "October 2025",
