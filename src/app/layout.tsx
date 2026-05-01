@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Black_Han_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import ChatWidget from "@/components/ChatWidget";
 
 // Analytics
 import { Analytics } from "@vercel/analytics/next"
@@ -53,6 +54,7 @@ export default function RootLayout({
         <main className="w-full min-h-dvh flex bg-gradient-to-bl from-black-two via-dark-green to-black-two py-24 px-5 lg:py-36">
           {children}
         </main>
+        <ChatWidget />
       </body>
     </html>
   );
