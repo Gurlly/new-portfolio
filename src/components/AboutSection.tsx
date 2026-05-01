@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import AboutCard from "@/components/AboutCard";
 
 // Icons
@@ -69,12 +69,12 @@ export default function AboutSection() {
   ];
 
   // Framer Motion Variants
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1, transition: { staggerChildren: 0.15 } },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -147,16 +147,16 @@ export default function AboutSection() {
           degree in Computer Science, I bring a unique blend of software
           engineering and data analytics expertise. On the development side, I
           deliver scalable, client-focused web applications using the MERN
-          stack. 
-          <br/>
-          <br/>
-          On the data side, I hold an Alteryx Designer Core Certification
-          and utilize Python, SQL, and Power BI to drive strategic
-          decision-making through actionable dashboards. My machine learning
-          foundation is grounded in PyTorch, allowing me to develop predictive
-          models and integrate modern neural networks into production
-          environments. I am passionate about continuous upskilling and thrive
-          in technically demanding development cycles.
+          stack.
+          <br />
+          <br />
+          On the data side, I hold an Alteryx Designer Core Certification and
+          utilize Python, SQL, and Power BI to drive strategic decision-making
+          through actionable dashboards. My machine learning foundation is
+          grounded in PyTorch, allowing me to develop predictive models and
+          integrate modern neural networks into production environments. I am
+          passionate about continuous upskilling and thrive in technically
+          demanding development cycles.
         </p>
 
         <div className="w-full flex items-center justify-center lg:justify-end mt-10 gap-6 flex-wrap">

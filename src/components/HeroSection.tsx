@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
 // Icons
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
@@ -24,7 +24,7 @@ export default function HeroSection() {
   ];
 
   // Animation variants for a staggered entrance
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -32,7 +32,7 @@ export default function HeroSection() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { type: "spring", stiffness: 120 } },
   };
