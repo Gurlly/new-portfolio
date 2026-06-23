@@ -16,6 +16,14 @@
     "credentialLink": "https://drive.google.com/file/d/1sSuamLFXDMzkXB4S4yUFdKRjMY2Gq1jz/view?usp=drive_link"
   },
   {
+    "title": "Associate Data Analyst Certified",
+    "company": "Datacamp",
+    "year": "June 2025 - June 2028",
+    "imageUrl": "https://drive.google.com/uc?export=view&id=11pGVw1d3ciFL_Rmt92zv6SZurRwwGPng",
+    "skills": ["Data Analyst", "SQL", "PostgreSQL", "Storytelling", "Analysis", "Data Processing"],
+    "credentialLink": "https://drive.google.com/file/d/11pGVw1d3ciFL_Rmt92zv6SZurRwwGPng/view?usp=drive_link"
+  },
+  {
     "title": "Deploying AI with FastAPI",
     "company": "Datacamp",
     "year": "October 2025",

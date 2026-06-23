@@ -1,57 +1,67 @@
-import Link from "next/link";
-
 import { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 
-// Icons
-import { FaLinkedinIn, FaGithub } from "react-icons/fa";
-import { MdEmail, MdOutlinePerson, MdLink } from "react-icons/md";
-
-// Page metadata
-export const metadata: Metadata = {
-  title: "Nathanael Martinez",
-  description:
-    "Portfolio of Nathanael, a Computer Science student specializing in backend development, machine learning, and scalable web systems. Explore projects in FastAPI, Next.js, and ML-powered solutions.",
-  keywords: [
-    "Nathanael",
-    "Portfolio",
-    "Backend Developer",
-    "Machine Learning",
-    "FastAPI",
-    "Next.js",
+// Structured data so search engines understand who Nathanael is and what he does
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Nathanael Martinez",
+  url: "https://natmartinez.xyz",
+  jobTitle: "Data Analyst & Full-Stack Developer",
+  email: "mailto:jp.martinez.nathanael123@gmail.com",
+  sameAs: [
+    "https://www.linkedin.com/in/nathanael-martinez-1ab5b2280/",
+    "https://github.com/Gurlly",
+  ],
+  knowsAbout: [
+    "Data Analysis",
     "Python",
-    "Data Science",
-    "API Design",
+    "SQL",
+    "Power BI",
+    "Alteryx",
+    "Machine Learning",
+    "Next.js",
+    "React",
+    "FastAPI",
+    "MongoDB",
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressCountry: "PH",
+  },
+};
+
+// Page metadata (title is inherited from the root layout's default)
+export const metadata: Metadata = {
+  description:
+    "Portfolio of Nathanael Martinez — a data analyst and full-stack developer from the Philippines. Explore projects spanning data analytics (Python, SQL, Power BI, Alteryx) and full-stack web development (Next.js, MongoDB, FastAPI).",
+  keywords: [
+    "Nathanael Martinez",
+    "Portfolio",
+    "Data Analyst",
+    "Full-Stack Developer",
+    "Data Analytics",
+    "Power BI",
+    "Alteryx",
+    "Python",
+    "SQL",
+    "Next.js",
+    "Machine Learning",
     "Philippines",
   ],
   alternates: {
     canonical: "https://natmartinez.xyz",
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-  }
 };
 
 export default function Home() {
-  const socialLinks: { icon: React.ReactNode; href: string }[] = [
-    {
-      icon: <FaLinkedinIn color="#FFFFFF" size={33} />,
-      href: "https://www.linkedin.com/in/nathanael-martinez-1ab5b2280/",
-    },
-    {
-      icon: <FaGithub color="#FFFFFF" size={33} />,
-      href: "https://github.com/Gurlly",
-    },
-    {
-      icon: <MdEmail color="#FFFFFF" size={33} />,
-      href: "mailto:jp.martinez.nathanael123@gmail.com",
-    },
-  ];
-
   return (
     <>
-      <HeroSection/>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+      />
+      <HeroSection />
     </>
   );
 }

@@ -1,4 +1,4 @@
-// components/AboutSection.tsx
+
 "use client";
 
 import Image from "next/image";
@@ -27,13 +27,19 @@ export default function AboutSection() {
 
     // If experience is less than a year, display it in months
     if (diffInYears < 1) {
-      const diffInMonths = Math.floor(diffInYears * 12);
+      const diffInMonths = Math.max(1, Math.floor(diffInYears * 12));
       return `${diffInMonths} Mos`;
     }
 
-    // Otherwise, display decimal years (e.g., "1.7")
-    return `${diffInYears.toFixed(1)}`;
+    // Otherwise, display decimal years with a unit so it reads the same as the months case
+    return `${diffInYears.toFixed(1)} Yrs`;
   };
+
+  // NOTE: excludes the portfolio site itself from the showcase count.
+  // Matches by title against projects.json — if that title changes there, update this too.
+  const projectCount = projects.filter(
+    (p) => p.title !== "Porfolio Website",
+  ).length;
 
   const aboutMe = [
     {
@@ -48,7 +54,7 @@ export default function AboutSection() {
       secondTitle: "Full-Stack & Data Science",
       description: "Projects that built futures",
       href: "/portfolio?tab=projects",
-      count: projects.length - 1,
+      count: projectCount,
     },
     {
       icon: <GoOrganization size={25} color="#FFFFFF" />,
@@ -90,9 +96,9 @@ export default function AboutSection() {
         initial="hidden"
         animate="visible"
         variants={containerVariants}
-        className="w-full flex flex-col items-center gap-10 xl:flex-row xl:items-center xl:gap-x-16"
+        className="w-full flex flex-col items-center gap-10 lg:flex-row lg:items-center lg:gap-x-16"
       >
-        <motion.div variants={itemVariants} className="relative group">
+        <motion.div variants={itemVariants} className="relative group shrink-0">
           <div className="absolute -inset-1 bg-gradient-to-r from-dirty-white to-dark-green rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
           <Image
             src="https://drive.google.com/uc?export=view&id=1Iy2D83SlBsiRPKiOfCOC610xpfNtILH_"
@@ -104,7 +110,7 @@ export default function AboutSection() {
           />
         </motion.div>
 
-        <div className="w-full flex flex-col items-center xl:items-start text-center xl:text-left">
+        <div className="w-full flex flex-col items-center lg:items-start text-center lg:text-left">
           <motion.h5
             variants={itemVariants}
             className="text-3xl md:text-4xl lg:text-5xl font-black-han text-gray-400 select-none"
@@ -119,7 +125,7 @@ export default function AboutSection() {
           </motion.h6>
           <motion.div
             variants={itemVariants}
-            className="flex gap-4 flex-wrap mt-6 text-white font-medium justify-center xl:justify-start"
+            className="flex gap-4 flex-wrap mt-6 text-white font-medium justify-center lg:justify-start"
           >
             <span className="py-2 px-5 bg-white/10 border border-white/20 rounded-full text-sm backdrop-blur-sm shadow-lg">
               Full-Stack Developer
@@ -142,28 +148,31 @@ export default function AboutSection() {
         transition={{ delay: 0.3 }}
         className="w-full mt-12 lg:mt-16 bg-black-two/40 p-6 md:p-10 rounded-2xl border border-white/5 shadow-xl"
       >
-        <p className="text-gray-300 text-justify text-base md:text-lg leading-relaxed select-none">
-          Graduating from the University of Santo Tomas in June 2026 with a
-          degree in Computer Science, I bring a unique blend of software
-          engineering and data analytics expertise. On the development side, I
-          deliver scalable, client-focused web applications using the MERN
-          stack.
-          <br />
-          <br />
-          On the data side, I hold an Alteryx Designer Core Certification and
-          utilize Python, SQL, and Power BI to drive strategic decision-making
-          through actionable dashboards. My machine learning foundation is
-          grounded in PyTorch, allowing me to develop predictive models and
-          integrate modern neural networks into production environments. I am
-          passionate about continuous upskilling and thrive in technically
-          demanding development cycles.
-        </p>
+        <div className="text-gray-300 text-left text-base md:text-lg leading-relaxed select-none space-y-4">
+          <p>
+            Graduating from the University of Santo Tomas in June 2026 with a
+            degree in Computer Science, I bring a unique blend of software
+            engineering and data analytics expertise. On the development side, I
+            deliver scalable, client-focused web applications using the MERN
+            stack.
+          </p>
+          <p>
+            On the data side, I hold an Alteryx Designer Core Certification and
+            utilize Python, SQL, and Power BI to drive strategic decision-making
+            through actionable dashboards. My machine learning foundation is
+            grounded in PyTorch, allowing me to develop predictive models and
+            integrate modern neural networks into production environments. I am
+            passionate about continuous upskilling and thrive in technically
+            demanding development cycles.
+          </p>
+        </div>
 
         <div className="w-full flex items-center justify-center lg:justify-end mt-10 gap-6 flex-wrap">
           <Link
             href="https://drive.google.com/drive/folders/1kBe3ymYaxSNbSms9RarbGKDDlMmXvr3s?usp=sharing"
             target="_blank"
-            className="group flex items-center text-white gap-x-3 px-6 py-3 w-48 justify-center rounded-xl shadow-lg bg-gradient-to-r from-black-two via-green-gray/80 to-green-gray font-medium hover:scale-105 transition-all border border-white/10"
+            rel="noopener noreferrer"
+            className="group flex items-center text-white gap-x-3 px-6 py-3 w-48 justify-center rounded-xl shadow-lg bg-gradient-to-r from-black-two via-green-gray/80 to-green-gray font-medium hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-beige/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black-two transition-all border border-white/10"
           >
             <MdLink
               size={24}
@@ -174,7 +183,8 @@ export default function AboutSection() {
           <Link
             href="https://github.com/Gurlly"
             target="_blank"
-            className="group flex items-center text-white gap-x-3 px-6 py-3 w-48 justify-center rounded-xl shadow-lg bg-gradient-to-r from-black-two via-green-gray/80 to-green-gray font-medium hover:scale-105 transition-all border border-white/10"
+            rel="noopener noreferrer"
+            className="group flex items-center text-white gap-x-3 px-6 py-3 w-48 justify-center rounded-xl shadow-lg bg-gradient-to-r from-black-two via-green-gray/80 to-green-gray font-medium hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-beige/70 focus-visible:ring-offset-2 focus-visible:ring-offset-black-two transition-all border border-white/10"
           >
             <FaGithub
               size={24}
@@ -191,20 +201,28 @@ export default function AboutSection() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={containerVariants}
-        className="w-full grid mt-16 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 pb-20"
+        className="w-full mt-16 pb-20"
       >
-        {aboutMe.map((experience, index) => (
-          <motion.div key={index} variants={itemVariants} className="h-full">
-            <AboutCard
-              icon={experience.icon}
-              title={experience.title}
-              secondTitle={experience.secondTitle}
-              description={experience.description}
-              href={experience.href}
-              count={experience.count}
-            />
-          </motion.div>
-        ))}
+        <motion.h2
+          variants={itemVariants}
+          className="font-black-han text-2xl md:text-3xl text-dirty-white/90 uppercase tracking-wide mb-6"
+        >
+          At a Glance
+        </motion.h2>
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+          {aboutMe.map((experience, index) => (
+            <motion.div key={index} variants={itemVariants} className="h-full">
+              <AboutCard
+                icon={experience.icon}
+                title={experience.title}
+                secondTitle={experience.secondTitle}
+                description={experience.description}
+                href={experience.href}
+                count={experience.count}
+              />
+            </motion.div>
+          ))}
+        </div>
       </motion.section>
     </section>
   );
