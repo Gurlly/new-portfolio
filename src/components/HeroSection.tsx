@@ -14,7 +14,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { MdEmail, MdOutlinePerson, MdLink } from "react-icons/md";
 
 // The two identities that make up Nathanael's profile — shown as a cycling line under his name
-const ROLES = ["Data Analyst", "Full-Stack Developer"];
+const ROLES = ["Data Analyst", "Data Scientist", "Full-Stack Developer"];
 
 export default function HeroSection() {
   const shouldReduceMotion = useReducedMotion();

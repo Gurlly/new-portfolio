@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from "next/image";
@@ -62,15 +61,15 @@ export default function AboutSection() {
       secondTitle: "Web Systems",
       description: "Since Aug 2024",
       href: "/portfolio?tab=experiences",
-      count: calculateExperience("2024-08-01"),
+      count: "1.5 Yrs", // Fixed at 1.5 years
     },
     {
       icon: <FaDatabase size={22} color="#FFFFFF" />,
       title: "Data Science",
       secondTitle: "ML & Analytics",
-      description: "Since Feb 2026",
+      description: "Since Aug 2026",
       href: "/portfolio?tab=experiences",
-      count: calculateExperience("2026-02-01"),
+      count: calculateExperience("2026-08-10"), // Hired on August 10, 2026
     },
   ];
 
@@ -157,13 +156,17 @@ export default function AboutSection() {
             stack.
           </p>
           <p>
-            On the data side, I hold an Alteryx Designer Core Certification and
-            utilize Python, SQL, and Power BI to drive strategic decision-making
-            through actionable dashboards. My machine learning foundation is
-            grounded in PyTorch, allowing me to develop predictive models and
-            integrate modern neural networks into production environments. I am
-            passionate about continuous upskilling and thrive in technically
-            demanding development cycles.
+            I am currently a Data Scientist at Inchcape Digital Philippines,
+            where I create and maintain machine learning models, perform
+            time-series analysis and forecasting, and more. Through these
+            efforts, I help the business make good business decisions. I also
+            hold an Alteryx Designer Core Certification and utilize Python, SQL,
+            and Power BI to drive strategic decision-making through actionable
+            dashboards. My machine learning foundation is grounded in PyTorch,
+            allowing me to develop predictive models and integrate modern neural
+            networks into production environments. I am passionate about
+            continuous upskilling and thrive in technically demanding
+            development cycles.
           </p>
         </div>
 

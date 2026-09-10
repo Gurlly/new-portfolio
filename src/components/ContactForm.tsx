@@ -136,6 +136,7 @@ const ContactForm = () => {
                       maxLength={50}
                       minLength={2}
                       required
+                      disabled
                       readOnly={loading}
                       {...field}
                     />
@@ -166,6 +167,7 @@ const ContactForm = () => {
                       placeholder="you@example.com"
                       className="bg-white/90 focus:bg-white text-black-two lg:py-6 lg:text-base rounded-xl border-2 border-transparent focus:border-green-gray/50 transition-all shadow-inner"
                       required
+                      disabled
                       readOnly={loading}
                       {...field}
                     />
@@ -199,6 +201,7 @@ const ContactForm = () => {
                       maxLength={30}
                       minLength={2}
                       required
+                      disabled
                       readOnly={loading}
                       {...field}
                     />
@@ -234,6 +237,7 @@ const ContactForm = () => {
                       maxLength={1000}
                       minLength={50}
                       required
+                      disabled
                       readOnly={loading}
                       {...field}
                     />
@@ -255,7 +259,7 @@ const ContactForm = () => {
                   ? "bg-black-two cursor-not-allowed opacity-80"
                   : "bg-gradient-to-r from-black-two via-green-gray/80 to-green-gray hover:scale-[1.02] hover:border-white/30"
               }`}
-              disabled={loading}
+              disabled
             >
               {loading ? (
                 <>
